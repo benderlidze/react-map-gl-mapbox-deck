@@ -125,11 +125,12 @@ const MapContainer = ({ geojsonData }) => {
                 interactiveLayerIds={['route']}
                 onClick={onClick}
             >
-                <DeckGLOverlay layers={[scatterplotLayer, layer, trips]} />
-                <NavigationControl />
                 <Source id="my-data" type="geojson" data={geojson}>
                     <Layer {...layerStyle} />
                 </Source>
+                <DeckGLOverlay layers={[scatterplotLayer, layer, trips]} />
+                <NavigationControl />
+
             </Map>
         </>
     );
